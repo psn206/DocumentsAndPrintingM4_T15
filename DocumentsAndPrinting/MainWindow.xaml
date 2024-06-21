@@ -1,0 +1,241 @@
+﻿<Window x:Class="DocumentsAndPrinting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DocumentsAndPrinting"        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <SolidColorBrush Color="#FF444343" x:Key="textColor"/>
+        <SolidColorBrush Color="Red" x:Key="headingColor"/>
+    </Window.Resources>
+
+    <StackPanel >
+        <ToolBar Background="White">
+            <Button x:Name="cleaningButton" Height="20" Width="20" Click="cleaningButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Очистка.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="readingButton" Height="20" Width="20" Click="readingButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Чтение.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="writingButton" Height="20" Width="20" Click="writingButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Запись.jpg"/>
+                </Button.Background>
+            </Button>
+
+        </ToolBar>
+        
+        
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Фон.jpg"/>
+            </Grid.Background>
+            <FlowDocumentReader x:Name="doc">
+                <FlowDocument>
+                    <Paragraph TextAlignment="Center" Foreground="{StaticResource headingColor}" FontWeight="Bold" >БАМ
+                        <Hyperlink NavigateUri="https://cargo.rzd.ru/ru/9786/page/103290?id=11154" >(источник)</Hyperlink>
+                        <Floater Width="800" HorizontalAlignment="Center">
+                            <BlockUIContainer>
+                                <Image Source="ImageArticle/Карта.jpg"/>
+                            </BlockUIContainer>
+                        </Floater>
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource headingColor}" FontWeight="Bold" >ГЕОГРАФИЧЕСКОЕ ПОЛОЖЕНИЕ БАЙКАЛО-АМУРСКОЙ МАГИСТРАЛИ</Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">Байкало-Амурская магистраль (БАМ) пролегает по территории Иркутской области, Забайкальского края, Амурской области, Республик Бурятии и Саха (Якутия), Хабаровского края.</Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">Ключевые станции БАМа:</Paragraph>
+                    <List MarkerStyle="Circle">
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Тайшет;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Лена;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Таксимо;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Тында;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Нерюнги;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Новый Ургал;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Комсомольск-на-Амуре;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Ванино;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">Советсвкая Гавань;</Paragraph>
+                        </ListItem>
+                    </List>
+                    <Paragraph Foreground="{StaticResource textColor}">БАМ связывается с Транссибирской железной дорогой тремя
+                    соединительными линиями: Бамовская – Тында, Известковая – Новый Ургал
+                    и Волочаевка – Комсомольск-на-Амуре.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">В настоящее время двухпутная железная дорога построена
+                        от Тайшета до Лены (704 км) и однопутная – от Лены до Таксимо 
+                        (725 км). На остальном участке БАМа построена однопутная
+                        железная дорога с тепловозной тягой.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">БАМ проходит по территории с суровыми природно-климатическими
+                    условиями - через районы вечной мерзлоты (глубина которой от 1-3 до
+                    сотен метров) и высокой сейсмичности (до 9 баллов). Магистраль пересекает
+                    11 полноводных рек (среди них Лена, Амур, Зея, Витим, Олекма, Селемджа, Бурея)
+                    и 7 горных хребтов (Байкальский, Северо-Муйский, Удоканский, Кодарский, 
+                    Олекминский Становик, Туранский и Дуссе-Алинский). Из-за сложного рельефа 
+                    местности более 30 км железной дороги проходит в тоннелях (среди них
+                    Байкальский (6,7 км) и Северо-Муйский (15,3 км)).
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource headingColor}" FontWeight="Bold" >БАМ В ЦИФРАХ:</Paragraph>
+                    <Table>
+                        <Table.Columns>
+                            <TableColumn Width="50"/>
+                            <TableColumn Width="Auto" />
+                        </Table.Columns>
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell >
+                                    <Paragraph Foreground="{StaticResource textColor}">280</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">- Cтанций на трассе БАМа</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">4 287</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">- Такова протяженность магистрали в километрах.</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">4 200</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">- Cmолько мостов на магистрали. 
+                                    Строители шутят, что БАМ — это мосты, 
+                                    соединённые дорогами.</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">1000</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Foreground="{StaticResource textColor}">- Столько км пути идёт по вечной мерзлоте.</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                    <Paragraph Foreground="{StaticResource headingColor}" FontWeight="Bold">ИСТОРИЯ СТРОИТЕЛЬСТВА БАМа</Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">
+                        <Floater Width="250" HorizontalAlignment="Right">
+                            <BlockUIContainer>
+                                <Image Source="ImageArticle/История.jpg"/>
+                            </BlockUIContainer>
+                        </Floater>
+                        Предпосылками к началу строительства Байкало-Амурской магистрали
+                    послужили неутешительные итоги русско-японской войны 1904-1905 гг., которые
+                    показали острую необходимость строительства второй рокадной железной дороги
+                    на востоке страны, дублирующей Транссибирскую железнодорожную магистраль.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">По первоначальному замыслу магистраль должна была пролегать от Уфы
+                    по кратчайшему расстоянию до восточного морского побережья через северную
+                    оконечность озера Байкал.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">В советское время изыскания по развитию железнодорожной сети на востоке
+                    страны возобновились в конце 1920-х гг. – начале 30-х гг. Именно тогда дорога
+                    от Тайшета на восток впервые получила свое современное название – Байкало-Амурская
+                    магистраль. Начинать дорогу предлагалось от станции Уруша (примерно середина нынешнего
+                    БАМа в районе Сковородина), а конечным пунктом планировалось сделать Комсомольск-на-Амуре,
+                    который тогда был селом Пермским.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">В 1932 г. Совнарком принял постановление «О строительстве Байкало-Амурской
+                    магистрали», которое утвердило план строительства БАМа. Стройку планировалось
+                    закончить в 3 года: сквозное движение по всей магистрали в режиме рабочей эксплуатации
+                    должно было быть открыто к концу 1935 г.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">Однако строительство магистрали неоднократно прекращалось
+                    по разным причинам (недостаток рабочей силы, Великая Отечественная война,
+                    землетрясения в районе строительства в конце 1950-х гг.).
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">Активное строительство БАМа было возобновлено в 1974 г. Основными
+                    двигателями стройки стали комсомольцы-добровольцы и военные строители.
+                    Республиканские комсомольские отряды соревновались между собой и имели «свои»
+                    объекты: крупнейшую станцию Ургал строила Украинская ССР, станцию Муякан – Белоруссия, 
+                    Уоян – Литва, Кичеру – Эстония, Таюру – Армения, Улькан – Азербайджан, Солони – Таджикистан,
+                    Алонку – Молдавия. Тынду, столицу БАМа, строили москвичи.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">К 1980 г. организуется Байкало-Амурская железная дорога с местонахождением
+                    управления дороги в г. Тында.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">29 сентября 1984 г. состоялась «золотая» стыковка на разъезде Балбухта
+                    (Каларский район Читинской области). Встретились восточное и западное
+                    направления строителей БАМ, продвигающиеся навстречу друг другу 10 лет. 
+                    1 октября состоялась укладка «золотых» звеньев БАМ на станции Куанда 
+                    (Каларский район Читинской области).
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">Окончательным завершением строительства Байкало-Амурской магистрали
+                    может считаться 5 декабря 2003 г., когда было открыто движение по 
+                    Северо-Муйскому тоннелю. По своей протяженности (15 343 м) он
+                    является самым длинным тоннелем в России и пятым в мире.
+                    По условиям строительства тоннель не имеет аналогов: 
+                    вечная мерзлота, обилие подземных вод, осыпи, обвалы, тектонические разломы.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">Строительство БАМа решило задачи общенационального уровня:</Paragraph>
+                    <Paragraph Foreground="{StaticResource headingColor}" FontWeight="Bold">БАМ В НАСТОЯЩЕЕ ВРЕМЯ</Paragraph>
+                    <List MarkerStyle="Circle">
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">открыт доступ к природным ресурсам огромного региона;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">обеспечены транзитные перевозки;</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">создан кратчайший межконтинентальный железнодорожный маршрут Восток-Запад,
+                            проходящий на протяжении 10 000 км по российским железным дорогам;
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph Foreground="{StaticResource textColor}">в военно-стратегическом смысле магистраль парирует возможные сбои и перерывы
+                            в движении поездов на Транссибе.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                    <Paragraph Foreground="{StaticResource textColor}">
+                        <Floater Width="250" HorizontalAlignment="Left">
+                            <BlockUIContainer>
+                                <Image Source="ImageArticle/Современность.jpg"/>
+                            </BlockUIContainer>
+                        </Floater>
+                        В настоящее время социально-экономический потенциал БАМа полностью не раскрыт. Эксплуатация
+                    этой магистрали не приносит ОАО «РЖД» прибыли. Главная причина сложившейся ситуации
+                    – медленное освоение прилегающих территорий. Из запланированных девяти территориально
+                    -производственных комплексов, которые должны были обеспечить загрузку БАМа, реализован 
+                    только один – в Нерюнгринском угольном бассейне.
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">
+                        <Run Text="По направлению Тайшет – Тында – Комсомольск-на-Амуре объем перевозок в грузовом направлении составляет порядка 12 млн тонн в год. Ограничение пропускной способности участков БАМа вызвано закрытием раздельных пунктов в период спада перевозок в 90-х гг., наличием участков, где нарушены межремонтные сроки, имеются дефекты земляного полотна, верхнего строения пути и искусственных сооружений."/>
+                    </Paragraph>
+                    <Paragraph Foreground="{StaticResource textColor}">
+                        БАМ перевозит около 12 млн пассажиров в год. Интенсивность движения пассажирских поездов по
+                    магистрали незначительна – 1-2 пары поездов в сутки на участке Комсомольск-Северобайкальск
+                    и 9-16 пар на западном участке.
+                    </Paragraph>
+                </FlowDocument>
+            </FlowDocumentReader>
+        </Grid>
+    </StackPanel>
+</Window>
