@@ -38,8 +38,8 @@
             </Grid.Background>
             <FlowDocumentReader x:Name="doc">
                 <FlowDocument>
-                    <Paragraph TextAlignment="Center" Foreground="{StaticResource headingColor}" FontWeight="Bold" >БАМ
-                        <Hyperlink NavigateUri="https://cargo.rzd.ru/ru/9786/page/103290?id=11154" >(источник)</Hyperlink>
+                    <Paragraph TextAlignment="Center" Foreground="{StaticResource headingColor}" FontWeight="Bold" >БАМ 
+                        <Hyperlink NavigateUri="https://cargo.rzd.ru/ru/9786/page/103290?id=11154" Click="Hyperlink_Click">(источник)</Hyperlink>
                         <Floater Width="800" HorizontalAlignment="Center">
                             <BlockUIContainer>
                                 <Image Source="ImageArticle/Карта.jpg"/>

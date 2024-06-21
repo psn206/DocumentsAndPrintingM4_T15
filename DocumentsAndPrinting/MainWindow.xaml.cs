@@ -49,5 +49,11 @@ namespace DocumentsAndPrinting
                 XamlWriter.Save(doc.Document, fs);
             }
         }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            string link = (sender as Hyperlink).NavigateUri.ToString();
+            System.Diagnostics.Process.Start(link);
+        }
     }
 }
